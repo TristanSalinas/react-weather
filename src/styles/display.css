@@ -1,0 +1,72 @@
+.card {
+  display: grid;
+  gap: 1rem;
+  background-color: rgba(240, 248, 255, 0.452);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 2px solid rgba(240, 248, 255, 0.6);
+}
+
+.days {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0rem 1rem;
+}
+
+.selector {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 33%;
+  border-radius: 0.5rem;
+  background-image: radial-gradient(circle, #ffffffde 0%, #ffffff2d 100%);
+  transition: left 0.5s ease;
+}
+
+.day {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+}
+.day:hover {
+  cursor: pointer;
+}
+
+.day > * {
+  margin: auto;
+}
+
+.hours {
+  display: grid;
+  max-width: 1000px;
+  overflow-x: scroll;
+  grid-template-columns: repeat(24, 6ch);
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: all 0.5s ease;
+}
+
+.hour {
+  position: relative;
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+}
+
+.hour:not(:last-child)::after {
+  content: "";
+  height: 80%;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  border-right: 1px dashed rgba(0, 0, 0, 0.141);
+}
+
+.hour-icon {
+  width: 32px;
+}
+
+.hour > * {
+  margin: auto;
+}

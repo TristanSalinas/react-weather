@@ -1,0 +1,22 @@
+form {
+  display: grid;
+  width: 70%;
+  grid-template-columns: 2fr 1fr;
+  padding: 3rem;
+  font-size: 1.5rem;
+  gap: 1rem;
+}
+input,
+button {
+  background-color: rgba(255, 255, 255, 0.685);
+  border: 2px solid white;
+  border-radius: 0.25rem;
+}
+
+input {
+  font-size: inherit;
+}
+
+button:hover {
+  cursor: pointer;
+}
