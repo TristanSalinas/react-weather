@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 import "/src/styles/display.css";
 
 const week = [
@@ -12,6 +13,7 @@ const week = [
 ];
 
 function Day(props) {
+  console.log(props.infos.averageCondition.iconPath);
   return (
     <div onClick={props.handleClick} className="day">
       <h2>{props.name}</h2>

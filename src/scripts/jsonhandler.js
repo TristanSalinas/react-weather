@@ -1,8 +1,9 @@
 // ex : createLocalIconPathFromUrl( "//cdn.weatherapi.com/weather/64x64/night/119.png" )   => "/night/119.png"
 function createLocalIconPathFromUrl(url) {
   const parts = url.split("/");
-  const path =
-    "../src/assets" + `/${parts[parts.length - 2]}/${parts[parts.length - 1]}`;
+  const path = `./src/assets/${parts[parts.length - 2]}/${
+    parts[parts.length - 1]
+  }`;
   return path;
 }
 // C:\Users\Trekol\Documents\WebDev\Sites\JsOdin\weather\src\assets\day\395.png
